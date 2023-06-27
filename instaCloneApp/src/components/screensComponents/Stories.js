@@ -9,62 +9,62 @@ const Stories = () => {
     {
       id: 1,
       name: 'Your Story',
-      Image: require('../../storage/images/userProfile.jpg'),
+      image: require('../../storage/images/userProfile.jpg'),
     },
     {
       id: 0,
       name: 'Ihor Lialiuk',
-      Image: require('../../storage/images/lialiuk.jpg'),
+      image: require('../../storage/images/lialiuk.jpg'),
     },
     {
       id: 0,
       name: 'Iryna Pec',
-      Image: require('../../storage/images/iryna.jpg'),
+      image: require('../../storage/images/iryna.jpg'),
     },
     {
       id: 0,
       name: 'Marija Pinchak',
-      Image: require('../../storage/images/marijaPinchak.jpg'),
+      image: require('../../storage/images/marijaPinchak.jpg'),
     },
     {
       id: 0,
       name: 'Red Webstudio',
-      Image: require('../../storage/images/red.jpg'),
+      image: require('../../storage/images/red.jpg'),
     },
     {
       id: 0,
       name: 'Milena Didukh',
-      Image: require('../../storage/images/milena.jpg'),
+      image: require('../../storage/images/milena.jpg'),
     },
     {
       id: 0,
       name: 'Sonya Designer',
-      Image: require('../../storage/images/sonya.jpg'),
+      image: require('../../storage/images/sonya.jpg'),
     },
     {
       id: 0,
       name: 'Vasul Melco',
-      Image: require('../../storage/images/vasul.jpg'),
+      image: require('../../storage/images/vasul.jpg'),
     },
     {
       id: 0,
       name: 'Ostap',
-      Image: require('../../storage/images/Ostap.jpg'),
+      image: require('../../storage/images/Ostap.jpg'),
     },
     {
       id: 0,
       name: 'Rostyslav Mychats',
-      Image: require('../../storage/images/rostyslav.jpg'),
+      image: require('../../storage/images/rostyslav.jpg'),
     },
     {
       id: 0,
       name: 'Pasha Zagrai',
-      Image: require('../../storage/images/pasha.jpg'),
+      image: require('../../storage/images/pasha.jpg'),
     },
     {
       id: 0,
       name: 'Nazarii Kekosh',
-      Image: require('../../storage/images/nazar.jpg'),
+      image: require('../../storage/images/nazar.jpg'),
     },
   ];
 
@@ -77,7 +77,10 @@ const Stories = () => {
         return (
           <TouchableOpacity
             key={index}
-            onPress={() => navigation.push('Status')}>
+            onPress={() => navigation.push('Status', {
+              name: data.name,
+              Image: data.image
+            })}>
             <View
               style={{
                 flexDirection: 'column',
@@ -115,7 +118,7 @@ const Stories = () => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={data.Image}
+                  source={data.image}
                   style={{
                     resizeMode: 'cover',
                     width: '92%',

@@ -62,7 +62,7 @@ const App = () => {
           headerShown: false
         }}>
           <Stack.Screen name="Bottom" component={BottomTabScreen} />
-          <Stack.Screen name="Status" component={Status} />
+          <Stack.Screen name="Status" component={Status } />
         </Stack.Navigator>
       </NavigationContainer>
     );
