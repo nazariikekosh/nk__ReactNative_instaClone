@@ -1,8 +1,10 @@
 import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {useNavigation} from '@react-navigation/native';
 
 const Stories = () => {
+  const navigation = useNavigation();
   const storyInfo = [
     {
       id: 1,
@@ -64,8 +66,6 @@ const Stories = () => {
       name: 'Nazarii Kekosh',
       Image: require('../../storage/images/nazar.jpg'),
     },
-
-    
   ];
 
   return (
@@ -75,7 +75,9 @@ const Stories = () => {
       style={{paddingVertical: 20}}>
       {storyInfo.map((data, index) => {
         return (
-          <TouchableOpacity key={index}>
+          <TouchableOpacity
+            key={index}
+            onPress={() => navigation.push('Status')}>
             <View
               style={{
                 flexDirection: 'column',
@@ -123,7 +125,12 @@ const Stories = () => {
                   }}
                 />
               </View>
-              <Text style={{textAlign: 'center', fontSize: 10, opacity: data.id == 0 ? 1 : 0.5}}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  fontSize: 10,
+                  opacity: data.id == 0 ? 1 : 0.5,
+                }}>
                 {data.name}
               </Text>
             </View>
