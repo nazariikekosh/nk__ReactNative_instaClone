@@ -22,6 +22,7 @@ const App = () => {
       <Tab.Navigator
       screenOptions={({route})=> ({
         tabBarShowLabel: false,
+        headerShown: false,
         tabBarStyle:{
           height: 50,
         },
