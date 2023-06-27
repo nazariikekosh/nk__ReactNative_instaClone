@@ -9,6 +9,63 @@ const Stories = () => {
       name: 'Your Story',
       Image: require('../../storage/images/userProfile.jpg'),
     },
+    {
+      id: 0,
+      name: 'Ihor Lialiuk',
+      Image: require('../../storage/images/lialiuk.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Iryna Pec',
+      Image: require('../../storage/images/iryna.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Marija Pinchak',
+      Image: require('../../storage/images/marijaPinchak.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Red Webstudio',
+      Image: require('../../storage/images/red.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Milena Didukh',
+      Image: require('../../storage/images/milena.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Sonya Designer',
+      Image: require('../../storage/images/sonya.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Vasul Melco',
+      Image: require('../../storage/images/vasul.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Ostap',
+      Image: require('../../storage/images/Ostap.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Rostyslav Mychats',
+      Image: require('../../storage/images/rostyslav.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Pasha Zagrai',
+      Image: require('../../storage/images/pasha.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Nazarii Kekosh',
+      Image: require('../../storage/images/nazar.jpg'),
+    },
+
+    
   ];
 
   return (
@@ -29,7 +86,7 @@ const Stories = () => {
                 <View
                   style={{
                     position: 'absolute',
-                    bottom: 0,
+                    bottom: 15,
                     right: 10,
                     zIndex: 1,
                   }}>
@@ -39,12 +96,22 @@ const Stories = () => {
                       fontSize: 20,
                       color: '#405de6',
                       backgroundColor: 'white',
-                      borderRadius: 1000,
+                      borderRadius: 100,
                     }}
                   />
                 </View>
               ) : null}
-              <View style={{width:68, height:68}}>
+              <View
+                style={{
+                  width: 68,
+                  height: 68,
+                  backgroundColor: 'white',
+                  borderWidth: 1.8,
+                  borderRadius: 100,
+                  borderColor: '#c13584',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
                 <Image
                   source={data.Image}
                   style={{
@@ -56,6 +123,9 @@ const Stories = () => {
                   }}
                 />
               </View>
+              <Text style={{textAlign: 'center', fontSize: 10, opacity: data.id == 0 ? 1 : 0.5}}>
+                {data.name}
+              </Text>
             </View>
           </TouchableOpacity>
         );
