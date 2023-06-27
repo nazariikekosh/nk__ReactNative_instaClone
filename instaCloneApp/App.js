@@ -17,7 +17,7 @@ const App = () => {
 
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
-  const bottomTabScreen = () => {
+  const BottomTabScreen = () => {
     return(
       <Tab.Navigator
       screenOptions={({route})=> ({
@@ -33,6 +33,12 @@ const App = () => {
             size = focused ? size+8 : size+2;
           } else if(route.name === 'Search'){
             iconName = focused ? "search" : "ios-search-outline";
+          }else if(route.name === 'Reels'){
+            iconName = focused ? "caret-forward-circle" : "caret-forward-circle-outline";
+          }else if(route.name === 'Activity'){
+            iconName = focused ? "ios-heart" : "ios-heart-outline";
+          }else if(route.name === 'Profile'){
+            iconName = focused ? "ios-person-circle" : "ios-person-outline";
           }
 
           return <Ionic name={iconName} size={size} color={colour}/>
@@ -50,7 +56,7 @@ const App = () => {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Bottom" component={bottomTabScreen} />
+          <Stack.Screen name="Bottom" component={BottomTabScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
