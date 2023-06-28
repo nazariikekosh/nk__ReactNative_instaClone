@@ -37,7 +37,7 @@ const Status = ({route, navigation}) => {
               height: 30,
             }}>
             <Image
-              sourсe={image}
+              source={image}
               style={{
                 borderRadius: 100,
                 backgroundColor: 'red',
