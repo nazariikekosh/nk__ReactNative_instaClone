@@ -19,7 +19,13 @@ const Status = ({route, navigation}) => {
   useEffect(() => {
     let timer = setTimeout(() => {
       navigation.goBack();
-    }, 3000);
+    }, 5000);
+    Animated.timing(progress, {
+      toValue: 5,
+      duration: 5000,
+      useNativeDriver: false,
+    }).start();
+    return () => clearTimeout(timer);
   },[])
 
   const [progress, setProgress] = useState(new Animated.Value(0));
@@ -49,12 +55,12 @@ const Status = ({route, navigation}) => {
           position: 'absolute',
           top: 18,
         }}>
-        <View
+        <Animated.View
           style={{
             height: '100%',
             backgroundColor: 'white',
-            width: '50%',
-          }}></View>
+            width: progressAnimation,
+          }}></Animated.View>
         <View
           style={{
             padding: 15,
