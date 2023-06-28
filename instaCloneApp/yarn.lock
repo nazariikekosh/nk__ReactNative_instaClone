@@ -4700,7 +4700,7 @@ metro-cache@0.76.7:
     metro-core "0.76.7"
     rimraf "^3.0.2"
 
-metro-config@*, metro-config@0.76.7:
+metro-config@*, metro-config@^0.76.7, metro-config@0.76.7:
   version "0.76.7"
   resolved "https://registry.npmjs.org/metro-config/-/metro-config-0.76.7.tgz"
   integrity sha512-CFDyNb9bqxZemiChC/gNdXZ7OQkIwmXzkrEXivcXGbgzlt/b2juCv555GWJHyZSlorwnwJfY3uzAFu4A9iRVfg==

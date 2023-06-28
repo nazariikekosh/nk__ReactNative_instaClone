@@ -79,7 +79,7 @@ const Stories = () => {
             key={index}
             onPress={() => navigation.push('Status', {
               name: data.name,
-              Image: data.image
+              image: data.image
             })}>
             <View
               style={{
