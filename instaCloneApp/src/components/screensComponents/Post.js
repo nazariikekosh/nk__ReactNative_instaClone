@@ -111,7 +111,9 @@ const Post = () => {
                   <Feather name="navigation" style={{fontSize: 20}} />
                 </TouchableOpacity>
               </View>
-              <Feather name="bookmark" style={{fontSize: 20}} />
+              <TouchableOpacity>
+                <Feather name="bookmark" style={{fontSize: 20}} />
+              </TouchableOpacity>
             </View>
             <View style={{paddingHorizontal: 15}}>
               <Text>

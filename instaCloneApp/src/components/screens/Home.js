@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { StatusBar } from 'react-native'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
@@ -18,11 +18,15 @@ const Home = () => {
         paddingHorizontal: 15,
         alignItems: 'center',
       }}>
-        <FontAwesome name="plus-square-o" style={{ fontSize: 24 }} />
+        <TouchableOpacity>
+          <FontAwesome name="plus-square-o" style={{ fontSize: 24 }} />
+        </TouchableOpacity>
         <Text style={{ fontFamily: 'Lobster-Regular', fontSize: 25, fontWeight: '500'}}>
           Instagram <Text style={{fontSize: 14, color: 'red'}}>Red</Text>
         </Text>
+        <TouchableOpacity>
         <Feather name='navigation' style={{ fontSize: 24 }} />
+        </TouchableOpacity>
       </View>
 
       <ScrollView>
