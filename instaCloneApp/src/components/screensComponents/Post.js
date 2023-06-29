@@ -11,18 +11,18 @@ const Post = () => {
       postTitle: 'RED',
       postPersonImage: require('../../storage/images/userProfile.jpg'),
       postImage: require('../../storage/images/postRedProfile.jpg'),
-      likes: 765,
+      likes: 1024,
       isLiked: false,
     },
     {
       postTitle: 'Ihor Lialiuk',
       postPersonImage: require('../../storage/images/lialiuk.jpg'),
       postImage: require('../../storage/images/postIhor.jpg'),
-      likes: 765,
+      likes: 917,
       isLiked: false,
     },
     {
-      postTitle: ' Webstudio Red',
+      postTitle: 'Webstudio Red',
       postPersonImage: require('../../storage/images/red.jpg'),
       postImage: require('../../storage/images/postRed.jpg'),
       likes: 765,
@@ -32,9 +32,11 @@ const Post = () => {
       postTitle: 'Iryna Pec',
       postPersonImage: require('../../storage/images/iryna.jpg'),
       postImage: require('../../storage/images/postIryna.jpg'),
-      likes: 765,
+      likes: 812,
       isLiked: false,
     },
+    
+
   ];
   return (
     <View>

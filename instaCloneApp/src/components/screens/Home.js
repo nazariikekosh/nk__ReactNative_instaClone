@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { StatusBar } from 'react-native'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
+import Ionic from "react-native-vector-icons/Ionicons"
 import Feather from "react-native-vector-icons/Feather"
 import Stories from '../../components/screensComponents/Stories';
 import Post from '../screensComponents/Post'
@@ -27,6 +28,9 @@ const Home = () => {
       <ScrollView>
         <Stories />
         <Post />
+        <View style={{justifyContent: 'center', alignItems: 'center', padding: 20}}>
+          <Ionic name="ios-reload-circle-sharp" style={{ fontSize: 60, opacity: 0.2 }} />
+        </View>
       </ScrollView>
     </View>
   )
