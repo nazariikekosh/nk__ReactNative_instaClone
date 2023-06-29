@@ -19,7 +19,7 @@ const Home = () => {
       }}>
         <FontAwesome name="plus-square-o" style={{ fontSize: 24 }} />
         <Text style={{ fontFamily: 'Lobster-Regular', fontSize: 25, fontWeight: '500'}}>
-          Instagram <Text style={{fontSize: 14}}>Red</Text>
+          Instagram <Text style={{fontSize: 14, color: 'red'}}>Red</Text>
         </Text>
         <Feather name='navigation' style={{ fontSize: 24 }} />
       </View>
