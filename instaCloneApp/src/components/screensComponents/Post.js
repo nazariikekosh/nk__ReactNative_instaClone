@@ -1,6 +1,7 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Post = () => {
   const postInfo = [
@@ -37,18 +38,27 @@ const Post = () => {
                   style={{width: 40, height: 40, borderRadius: 100}}
                 />
                 <View style={{paddingLeft: 5}}>
-                    <Text style={{fontSize: 15, fontWeight: 'bold', }}> 
-                        {
-                          data.postTitle
-                        }
-                    </Text>
+                  <Text style={{fontSize: 15, fontWeight: 'bold'}}>
+                    {data.postTitle}
+                  </Text>
                 </View>
               </View>
-              <Feather name="more-vertical" style={{fontSize: 20}}/>
+              <Feather name="more-vertical" style={{fontSize: 20}} />
             </View>
-            <View>
-                <Image source={data.postImage} style={{width: '100%', height: 400}}/>
+            <View style={{
+                position: 'relative',
+                justifyContent: 'center',
+                alignItems: 'center',
+
+            }}>
+              <Image
+                source={data.postImage}
+                style={{width: '100%', height: 400}}
+              />
             </View>
+            <TouchableOpacity>
+                <AntDesign name={like ? 'heart' : 'hearto'} size={20} style={{paddingRight: 10, fontSize: 20, color: like ? 'red' : 'black'}} />
+            </TouchableOpacity>
           </View>
         );
       })}
