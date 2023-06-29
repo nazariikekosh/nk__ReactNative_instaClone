@@ -4,6 +4,7 @@ import { StatusBar } from 'react-native'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import Feather from "react-native-vector-icons/Feather"
 import Stories from '../../components/screensComponents/Stories';
+import Post from '../screensComponents/Post'
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
 
       <ScrollView>
         <Stories />
+        <Post />
       </ScrollView>
     </View>
   )

@@ -28,7 +28,7 @@ const Stories = () => {
     },
     {
       id: 0,
-      name: 'Red Webstudio',
+      name: ' Webstudio Red',
       image: require('../../storage/images/red.jpg'),
     },
     {
