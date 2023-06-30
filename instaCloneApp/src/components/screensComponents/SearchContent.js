@@ -99,11 +99,16 @@ const SearchContent = () => {
                         <TouchableOpacity style={{paddingRight: 2}}>
                             <Image source={data.images[2]} style={{width: 260, height: 300}} />
                         </TouchableOpacity>
-                        <View>
+                        <View style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            width: 130,
+                            justifyContent: 'space-between',
+                        }}>
                             {
                                 data.images.slice(0,2).map((imageData, imgIndex)=>{
                                     return(
-                                        <TouchableOpacity>
+                                        <TouchableOpacity style={{paddingBottom: 2}}>
                                             <Image source={imageData} style={{width: 129, height: 150}} />
                                         </TouchableOpacity>
                                     )
