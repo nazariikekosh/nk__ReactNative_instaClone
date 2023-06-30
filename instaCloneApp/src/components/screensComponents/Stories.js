@@ -43,7 +43,7 @@ const Stories = () => {
     },
     {
       id: 0,
-      name: 'Vasul Melco',
+      name: 'Vasul Melko',
       image: require('../../storage/images/vasul.jpg'),
     },
     {

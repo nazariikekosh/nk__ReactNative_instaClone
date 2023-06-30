@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text, ScrollView} from 'react-native';
+import React from 'react';
+import SearchBox from '../screensComponents/SearchBox';
 
 const Search = () => {
   return (
-    <View>
-      <Text>Search Screen</Text>
+    <View style={{width: '100%',height: '100%', backgroundColor: 'white', position: 'relative'}}>
+      <ScrollView>
+        <SearchBox />
+      </ScrollView>
     </View>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
