@@ -1,12 +1,30 @@
-import { View, Text, TouchableOpacity, Image, Modal } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Modal, Animated } from 'react-native';
 import React, { useState } from 'react';
 
 const FullScreenImage = ({ image, onClose }) => {
+  const opacity = useState(new Animated.Value(0))[0];
+
+  const fadeIn = () => {
+    Animated.timing(opacity, {
+      toValue: 1,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const fadeOut = () => {
+    Animated.timing(opacity, {
+      toValue: 0,
+      duration: 300,
+      useNativeDriver: true,
+    }).start(onClose);
+  };
+
   return (
     <Modal
       animationType="fade"
       transparent={true}
-      onRequestClose={onClose}
+      onRequestClose={fadeOut}
     >
       <TouchableOpacity
         style={{
@@ -15,11 +33,13 @@ const FullScreenImage = ({ image, onClose }) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
-        onPress={onClose}
+        activeOpacity={1}
+        onPress={fadeOut}
       >
-        <Image
+        <Animated.Image
           source={image}
-          style={{ width: '80%', height: '80%', resizeMode: 'contain' }}
+          style={{ opacity, width: '80%', height: '80%', resizeMode: 'contain' }}
+          onLoad={fadeIn}
         />
       </TouchableOpacity>
     </Modal>
