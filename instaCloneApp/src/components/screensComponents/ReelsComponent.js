@@ -13,12 +13,19 @@ const ReelsComponent = () => {
     }
 
   return (
-    <SwiperFlatList 
-    onChangeIndex={handleChandleIndexValue}
-    data={videoData}
-    renderItem={(item, index)=>
-    <SingleReel item={item} index={index} currentIndex={currentIndex}/>} />
+    <SwiperFlatList
+      data={videoData}
+      vertical={true}
+      onChangeIndex={handleChandleIndexValue}
+      renderItem={
+        ({item, index}) => (
+          <SingleReel item={item} index={index} currentIndex={currentIndex} />
+        )
+      }
+      keyExtractor={(item, index)=> index}
+    />
   )
+   
 }
 
 export default ReelsComponent
