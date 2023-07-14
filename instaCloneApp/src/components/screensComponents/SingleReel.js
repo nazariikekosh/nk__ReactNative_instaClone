@@ -1,4 +1,4 @@
-import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
+import {View, Text, Dimensions, TouchableOpacity, Image} from 'react-native';
 import React, {useRef, useState} from 'react';
 import Video from 'react-native-video';
 import Ionic from 'react-native-vector-icons/Ionicons';
@@ -59,7 +59,17 @@ const SingleReel = ({item, index, currentIndex}) => {
           padding:mute ? 20:0
         }}
       />
+      <View>
+        <View>
+          <TouchableOpacity>
+            <View style={{width: 32, height: 32}}>
+              <Image source={item.postProfile} style={{width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 100}}/>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
+
   );
 };
 
