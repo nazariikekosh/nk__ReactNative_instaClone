@@ -1,5 +1,5 @@
 import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
-import React, {useRef} from 'react';
+import React, {useRef , useState} from 'react';
 import Video from 'react-native-video';
 
 const SingleReel = ({item, index, currentIndex}) => {
@@ -13,6 +13,8 @@ const SingleReel = ({item, index, currentIndex}) => {
     console.log('error', error);
   };
 
+  const [mute, setMute] = useState(false)
+
   return (
     <View
       style={{
@@ -21,6 +23,7 @@ const SingleReel = ({item, index, currentIndex}) => {
         position: 'relative',
       }}>
       <TouchableOpacity
+      onPress={() => setMute(!mute)}
         style={{
           width: '100%',
           height: '100%',
@@ -34,6 +37,7 @@ const SingleReel = ({item, index, currentIndex}) => {
           resizeMode="cover"
           paused={false}
           source={item.video}
+          muted={mute}
           style={{
             width: '100%',
             height: '100%',
