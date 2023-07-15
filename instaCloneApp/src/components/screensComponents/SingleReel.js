@@ -62,7 +62,7 @@ const SingleReel = ({item, index, currentIndex}) => {
       <View>
         <View>
           <TouchableOpacity>
-            <View style={{width: 32, height: 32}}>
+            <View style={{width: 32, height: 32, borderRadius: 100, backgroundColor}}>
               <Image source={item.postProfile} style={{width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 100}}/>
             </View>
           </TouchableOpacity>
