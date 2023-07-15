@@ -2,6 +2,9 @@ import {View, Text, Dimensions, TouchableOpacity, Image} from 'react-native';
 import React, {useRef, useState} from 'react';
 import Video from 'react-native-video';
 import Ionic from 'react-native-vector-icons/Ionicons';
+import {YouTubePlayer} from 'react-native-youtube-iframe';
+import axios from 'axios';  
+
 const SingleReel = ({item, index, currentIndex}) => {
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
@@ -62,7 +65,7 @@ const SingleReel = ({item, index, currentIndex}) => {
       <View>
         <View>
           <TouchableOpacity>
-            <View style={{width: 32, height: 32, borderRadius: 100, backgroundColor}}>
+            <View style={{width: 32, height: 32, borderRadius: 100, backgroundColor: 'white'}}>
               <Image source={item.postProfile} style={{width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 100}}/>
             </View>
           </TouchableOpacity>
