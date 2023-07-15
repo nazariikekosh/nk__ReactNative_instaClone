@@ -35,12 +35,16 @@ const App = () => {
             size = focused ? size+8 : size+2;
           } else if(route.name === 'Search'){
             iconName = focused ? "search" : "ios-search-outline";
+            size = focused ? size+8 : size+2;
           }else if(route.name === 'Reels'){
             iconName = focused ? "caret-forward-circle" : "caret-forward-circle-outline";
+            size = focused ? size+8 : size+2;
           }else if(route.name === 'Activity'){
             iconName = focused ? "ios-heart" : "ios-heart-outline";
+            size = focused ? size+8 : size+2;
           }else if(route.name === 'Profile'){
             iconName = focused ? "ios-person-circle" : "ios-person-outline";
+            size = focused ? size+8 : size+2;
           }
 
           return <Ionic name={iconName} size={size} color={colour}/>
