@@ -15,6 +15,8 @@ const SingleReel = ({item, index, currentIndex}) => {
   };
 
   const [mute, setMute] = useState(false);
+  const [like, setLike] = useState(item.isLike);
+
 
   return (
     <View
@@ -65,7 +67,7 @@ const SingleReel = ({item, index, currentIndex}) => {
           position: 'absolute',
           width: windowWidth,
           zIndex: 1,
-          bottom: 80,
+          bottom: 30,
           padding: 10,
         }}>
         <View style={{}}>
@@ -100,19 +102,28 @@ const SingleReel = ({item, index, currentIndex}) => {
           <Text style={{color: 'white', fontSize: 14, marginHorizontal: 10}}>
             Feel the buity of nature
           </Text>
-          <View style={{flexDirection: 'row', padding:10}}>
+          <View style={{flexDirection: 'row', padding: 10}}>
             <Ionic
               name="ios-musical-note"
               style={{color: 'white', fontSize: 16}}
             />
-            <Text style={{color:'white'}}>Original Audio</Text>
+            <Text style={{color: 'white'}}>Original Audio</Text>
           </View>
         </View>
       </View>
-      <View style={{position: 'absolute', bottom: 0, right:0, alignItems: 'center'}}>
-                  <TouchableOpacity>
-                    <AntDesign name="hearto" style={{color: 'white', fontSize: 16}} />
-                  </TouchableOpacity>
+      <View
+        style={{
+          position: 'absolute',
+          bottom: 40,
+          right: 0,
+          alignItems: 'center',
+        }}>
+        <TouchableOpacity onPress={() => setLike(!like)}
+         style={{padding: 10}}>
+          <AntDesign
+          name={like ? 'heart' : 'hearto'}
+          style={{color: 'white', fontSize: 25}} />
+        </TouchableOpacity>
       </View>
     </View>
   );
